@@ -2,8 +2,10 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Countdown from "@/components/Countdown";
 import Features from "@/components/Features";
+import BuiltForAfrica from "@/components/BuiltForAfrica";
 import DashboardPreview from "@/components/DashboardPreview";
 import HowItWorks from "@/components/HowItWorks";
+import WhyWeExist from "@/components/WhyWeExist";
 import Waitlist from "@/components/Waitlist";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -18,10 +20,12 @@ const Index = () => {
         <div id="features">
           <Features />
         </div>
+        <BuiltForAfrica />
         <DashboardPreview />
         <div id="how-it-works">
           <HowItWorks />
         </div>
+        <WhyWeExist />
         <Waitlist />
         <div id="faq">
           <FAQ />
