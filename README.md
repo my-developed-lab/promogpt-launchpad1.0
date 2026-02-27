@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# PromoGPT
 
-## Project info
+PromoGPT is an AI-powered virtual marketing team designed for SMEs. It transforms product and sales data into actionable campaigns, posts across approved platforms, and tracks real engagement-to-sales performance.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech Stack
 
-## How can I edit this code?
+- **Next.js**
+- **React**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Supabase** (if connected)
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Product data integration**: Connect product and sales data to drive smarter marketing decisions.
+- **AI campaign generation**: Automatically generate campaigns tailored to your audiences and channels.
+- **Real-time performance tracking**: Monitor campaign performance and link engagement directly to sales outcomes.
+- **Countdown launch timer**: Build anticipation with a configurable launch countdown.
+- **Waitlist email capture**: Collect and manage early-access signups from interested customers.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- **Node.js** and **npm** installed on your machine.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+From the project root, install dependencies:
 
-Follow these steps:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Local Development
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Start the development server:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open your browser and navigate to the URL shown in the terminal (typically `http://localhost:5173` for Vite or `http://localhost:3000` for Next.js, depending on your setup).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment
 
-**Use GitHub Codespaces**
+PromoGPT is optimized for deployment on **Vercel**.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket).
+2. Create a new project in Vercel and connect your repository.
+3. Vercel will automatically detect the framework and configure the build.
+4. Trigger a deployment from your main branch or a specific production branch.
 
-## What technologies are used for this project?
+Once deployed, you can configure environment variables, custom domains, and analytics directly from the Vercel dashboard.
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
