@@ -6,25 +6,25 @@ const reasons = [
     icon: Ban,
     number: "01",
     title: "Marketing agencies are expensive",
-    description: "Most African SMEs can't afford $2,000+/month for a marketing team. PromoGPT gives you agency-level execution at a fraction of the cost.",
+    description: "Most African SMEs can't afford $2,000+/month retainers. PromoGPT gives you consistent campaigns without agency overhead.",
   },
   {
     icon: Database,
     number: "02",
     title: "Data exists but isn't used",
-    description: "Your product data, customer behavior, and sales patterns hold gold — but most businesses never turn it into action.",
+    description: "Your POS, Shopify, and marketplace data already show what people buy in Nairobi, Lagos, and Accra — it rarely gets turned into clear campaigns.",
   },
   {
     icon: Lightbulb,
     number: "03",
     title: "SMEs need execution, not advice",
-    description: "You don't need another marketing guide. You need campaigns created, posted, and tracked — automatically.",
+    description: "You don't need another thread or playbook. You need campaigns created, posted, and tracked across the channels your customers actually use.",
   },
   {
     icon: Users,
     number: "04",
     title: "Your virtual marketing team",
-    description: "PromoGPT acts as a full marketing department — strategizing, creating, posting, and optimizing in real time.",
+    description: "PromoGPT behaves like a small marketing team: planning, creating, posting, and improving based on which products move and where.",
   },
 ];
 

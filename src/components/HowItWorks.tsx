@@ -5,23 +5,23 @@ import { useRef } from "react";
 const steps = [
   {
     icon: Store,
-    title: "Connect Your Business",
-    description: "Link your product catalog, store, or inventory. We sync everything in minutes.",
+    title: "Connect your store",
+    description: "Link your Shopify, Jumia, WooCommerce, or WhatsApp catalog. We sync products and pricing in minutes.",
   },
   {
     icon: Brain,
-    title: "AI Builds Campaign Strategy",
-    description: "PromoGPT analyzes your data and creates tailored marketing campaigns automatically.",
+    title: "PromoGPT plans the campaign",
+    description: "PromoGPT reads your product and sales data and proposes a simple plan you can approve or tweak.",
   },
   {
     icon: Share2,
-    title: "We Post & Track Performance",
-    description: "Campaigns go live on your approved platforms. Every click and conversion is tracked.",
+    title: "Posts go live on your channels",
+    description: "We publish to your approved channels — WhatsApp, Instagram, email, and more — and track every click.",
   },
   {
     icon: TrendingUp,
-    title: "You See Real Sales Impact",
-    description: "Watch real revenue roll in with weekly intelligence updates and optimization.",
+    title: "You see sales, not just clicks",
+    description: "Watch the sales graph grow as PromoGPT keeps optimizing based on what people actually buy.",
   },
 ];
 

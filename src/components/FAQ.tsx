@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     question: "What exactly does PromoGPT do?",
-    answer: "PromoGPT is an AI-powered virtual marketing team. It analyzes your product data, creates tailored marketing campaigns, posts them on your approved platforms, and tracks real engagement-to-sales performance — all automatically.",
+    answer: "PromoGPT acts like a marketing team for your store. It uses your product and sales data to create campaigns, post them on your approved platforms, and show which ones actually drive sales.",
   },
   {
     question: "Is this just another social media scheduler?",

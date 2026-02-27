@@ -6,8 +6,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background glow */}
-      <div className="absolute inset-0 blue-glow opacity-40" />
-      <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute inset-0 blue-glow opacity-30" />
 
       <div className="container mx-auto section-padding relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -29,12 +28,15 @@ const Hero = () => {
             </motion.div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-              Your AI-Powered{" "}
-              <span className="gold-gradient-text">Marketing Team</span>
+              Marketing that turns{" "}
+              <span className="gold-gradient-text">product data into sales</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-              Turn product data into real campaigns, real engagement, and real sales.
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-2">
+              We help African SMEs turn product data into campaigns that actually sell.
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8">
+              No agencies. No guesswork. Just WhatsApp, Instagram, and store campaigns that move inventory in Nairobi, Lagos, Accra, and beyond.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -58,7 +60,7 @@ const Hero = () => {
               <div className="glass-card rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={dashboardMockup}
-                  alt="PromoGPT AI Marketing Dashboard showing campaign performance analytics"
+                  alt="PromoGPT dashboard showing campaign performance from posts to sales"
                   className="w-full h-auto"
                   loading="eager"
                 />

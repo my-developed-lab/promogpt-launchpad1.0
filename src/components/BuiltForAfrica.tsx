@@ -31,18 +31,53 @@ const features = [
 
 const AfricaMapSilhouette = () => (
   <svg
-    viewBox="0 0 500 600"
-    className="w-full max-w-[200px] sm:max-w-[280px] mx-auto opacity-[0.08] dark:opacity-[0.12]"
-    fill="none"
-    stroke="hsl(var(--primary))"
-    strokeWidth="1.5"
+    viewBox="0 0 400 500"
+    className="w-full max-w-[220px] sm:max-w-[300px] mx-auto"
+    aria-hidden="true"
   >
-    <path d="M250 30 C230 25, 200 30, 185 45 C170 55, 160 50, 145 55 C130 60, 120 75, 125 90 C128 100, 135 105, 130 120 C125 135, 115 140, 110 155 C105 170, 110 185, 120 195 C130 205, 125 215, 120 230 C115 250, 105 265, 100 280 C95 295, 90 310, 95 330 C98 345, 105 355, 110 370 C115 385, 120 400, 130 415 C140 430, 155 440, 165 455 C175 470, 185 480, 195 490 C205 498, 215 500, 225 495 C235 490, 240 480, 250 475 C260 470, 270 465, 280 455 C290 445, 295 430, 300 415 C305 400, 315 385, 325 370 C335 355, 340 340, 340 325 C340 310, 345 295, 350 280 C355 265, 365 250, 370 235 C375 220, 370 205, 360 195 C350 185, 345 175, 340 160 C335 145, 340 130, 345 115 C348 105, 345 95, 340 85 C335 75, 325 65, 315 55 C305 48, 290 42, 280 38 C270 34, 260 32, 250 30Z" />
-    <circle cx="330" cy="195" r="6" fill="hsl(var(--gold))" stroke="none" opacity="0.8" />
-    <circle cx="345" cy="315" r="6" fill="hsl(var(--gold))" stroke="none" opacity="0.8" />
-    <circle cx="280" cy="455" r="6" fill="hsl(var(--gold))" stroke="none" opacity="0.8" />
-    <circle cx="300" cy="250" r="4" fill="hsl(var(--gold))" stroke="none" opacity="0.5" />
-    <circle cx="260" cy="170" r="4" fill="hsl(var(--gold))" stroke="none" opacity="0.5" />
+    <defs>
+      {/* Base heatmap gradient across the continent */}
+      <linearGradient id="africaHeat" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+        <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.6" />
+        <stop offset="100%" stopColor="hsl(var(--gold))" stopOpacity="0.8" />
+      </linearGradient>
+      {/* Soft radial heat spots for key hubs */}
+      <radialGradient id="lagosHeat" cx="0.65" cy="0.35" r="0.25">
+        <stop offset="0%" stopColor="hsl(var(--gold))" stopOpacity="0.9" />
+        <stop offset="60%" stopColor="hsl(var(--gold))" stopOpacity="0.2" />
+        <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+      </radialGradient>
+      <radialGradient id="nairobiHeat" cx="0.75" cy="0.55" r="0.23">
+        <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.9" />
+        <stop offset="60%" stopColor="hsl(var(--accent))" stopOpacity="0.2" />
+        <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+      </radialGradient>
+      <radialGradient id="joburgHeat" cx="0.6" cy="0.8" r="0.25">
+        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
+        <stop offset="60%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
+        <stop offset="100%" stopColor="transparent" stopOpacity="0" />
+      </radialGradient>
+    </defs>
+
+    {/* Continent outline */}
+    <path
+      d="M210 20C182 26 162 38 146 55C130 73 118 91 108 112C97 135 88 151 74 170C60 189 49 208 44 229C39 249 40 268 46 288C53 309 60 327 72 345C83 362 94 379 105 396C116 412 125 427 137 441C150 456 161 466 176 473C191 481 205 484 220 481C235 478 246 471 255 461C264 451 272 441 280 431C289 420 295 408 300 395C306 381 312 368 319 355C327 340 336 326 343 310C351 292 355 274 355 255C355 235 352 218 345 201C338 183 330 167 323 150C315 133 309 118 304 101C298 82 291 66 280 50C268 33 252 25 233 21C225 19 217 19 210 20Z"
+      fill="url(#africaHeat)"
+      stroke="hsl(var(--border))"
+      strokeWidth="1.2"
+      className="drop-shadow-sm dark:drop-shadow-md"
+    />
+
+    {/* Heatmap overlays for Lagos / Nairobi / Johannesburg */}
+    <ellipse cx="250" cy="165" rx="90" ry="70" fill="url(#lagosHeat)" />
+    <ellipse cx="280" cy="255" rx="80" ry="70" fill="url(#nairobiHeat)" />
+    <ellipse cx="235" cy="355" rx="90" ry="75" fill="url(#joburgHeat)" />
+
+    {/* Hub markers */}
+    <circle cx="255" cy="165" r="6" fill="hsl(var(--background))" stroke="hsl(var(--gold))" strokeWidth="2" />
+    <circle cx="290" cy="250" r="6" fill="hsl(var(--background))" stroke="hsl(var(--accent))" strokeWidth="2" />
+    <circle cx="240" cy="360" r="6" fill="hsl(var(--background))" stroke="hsl(var(--primary))" strokeWidth="2" />
   </svg>
 );
 
@@ -51,7 +86,7 @@ const BuiltForAfrica = () => {
     <section className="section-padding relative overflow-hidden">
       {/* Subtle pattern */}
       <div
-        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+        className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
         style={{
           backgroundImage: `repeating-linear-gradient(45deg, hsl(var(--gold)) 0px, hsl(var(--gold)) 1px, transparent 1px, transparent 12px), repeating-linear-gradient(-45deg, hsl(var(--gold)) 0px, hsl(var(--gold)) 1px, transparent 1px, transparent 12px)`,
         }}
@@ -66,12 +101,10 @@ const BuiltForAfrica = () => {
           className="text-center mb-14"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Built for <span className="gold-gradient-text">African Markets</span>.{" "}
-            <br className="hidden sm:block" />
-            Designed for Global Growth.
+            Built for <span className="gold-gradient-text">African commerce</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            PromoGPT understands the unique dynamics of African commerce — from mobile-first shopping to local platform ecosystems.
+            PromoGPT understands how people actually buy in Nairobi, Lagos, Accra, and beyond — mobile-first, chat-driven, and platform-fragmented.
           </p>
         </motion.div>
 

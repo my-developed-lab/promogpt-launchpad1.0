@@ -4,14 +4,10 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { Sparkles } from "lucide-react";
 
 const chartData = [
-  { name: "Week 1", revenue: 2800 },
-  { name: "Week 2", revenue: 3400 },
-  { name: "Week 3", revenue: 4800, marker: "Campaign Launch" },
-  { name: "Week 4", revenue: 6200 },
-  { name: "Week 5", revenue: 8100, marker: "Optimization Applied" },
-  { name: "Week 6", revenue: 10400 },
-  { name: "Week 7", revenue: 13200, marker: "Weekly AI Update" },
-  { name: "Week 8", revenue: 16800 },
+  { name: "Week 1", revenue: 2800, marker: "Campaign launch" },
+  { name: "Week 2", revenue: 4200, marker: "Engagement spike" },
+  { name: "Week 3", revenue: 6100, marker: "Optimization applied here" },
+  { name: "Week 4", revenue: 9200, marker: "Sales increase" },
 ];
 
 const kpis = [
@@ -82,10 +78,11 @@ const DashboardPreview = () => {
           className="text-center mb-14"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Revenue <span className="gold-gradient-text">Impact Dashboard</span>
+            See the full{" "}
+            <span className="gold-gradient-text">campaign lifecycle</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            See exactly how PromoGPT campaigns translate into real revenue growth.
+            From first post to final purchase, see exactly how PromoGPT campaigns turn attention into sales.
           </p>
         </motion.div>
 
@@ -129,10 +126,10 @@ const DashboardPreview = () => {
 
           {/* Revenue Impact Chart */}
           <div className="mb-3 flex items-center justify-between">
-            <p className="text-sm font-semibold text-muted-foreground">Revenue Influenced by Campaigns</p>
+            <p className="text-sm font-semibold text-muted-foreground">Week 1–4: Launch → Engagement → Optimization → Sales</p>
             <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full gold-gradient">
               <Sparkles className="w-3 h-3 text-foreground" />
-              <span className="text-xs font-bold text-foreground">AI Optimization Applied</span>
+              <span className="text-xs font-bold text-foreground">Optimization point</span>
             </div>
           </div>
           <div className="h-64 sm:h-72 mb-8">
