@@ -25,6 +25,11 @@ const features = [
 ];
 
 const Features = () => {
+  const primaryFeature = features[0];
+  const footerFeature = features[3];
+  const PrimaryIcon = primaryFeature.icon;
+  const FooterIcon = footerFeature.icon;
+
   return (
     <section className="section-padding bg-secondary/30">
       <div className="container mx-auto">
@@ -58,11 +63,11 @@ const Features = () => {
             <div className="absolute top-0 right-0 w-24 h-24 gold-gradient opacity-[0.06] rounded-bl-[70px] group-hover:opacity-[0.14] transition-opacity duration-300" />
             <div className="flex flex-col md:flex-row md:items-start md:gap-6">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 mb-4 md:mb-0 group-hover:bg-accent/20 transition-colors duration-300">
-                <features[0].icon className="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-300" strokeWidth={1.5} />
+                <PrimaryIcon className="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-300" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">{features[0].title}</h3>
-                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{features[0].description}</p>
+                <h3 className="text-xl font-semibold mb-2">{primaryFeature.title}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{primaryFeature.description}</p>
               </div>
             </div>
           </motion.div>
@@ -105,11 +110,11 @@ const Features = () => {
             <div className="absolute top-0 right-10 w-24 h-24 gold-gradient opacity-[0.05] rounded-bl-[70px] group-hover:opacity-[0.13] transition-opacity duration-300" />
             <div className="flex flex-row items-start gap-4 sm:gap-5">
               <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors duration-300">
-                <features[3].icon className="w-5 h-5 text-primary group-hover:text-accent transition-colors duration-300" strokeWidth={1.5} />
+                <FooterIcon className="w-5 h-5 text-primary group-hover:text-accent transition-colors duration-300" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-base sm:text-lg font-semibold mb-1.5">{features[3].title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{features[3].description}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-1.5">{footerFeature.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{footerFeature.description}</p>
               </div>
             </div>
           </motion.div>
